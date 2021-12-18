@@ -1,0 +1,42 @@
+{% extends 'authorized_base.html' %}
+
+{% block title %}
+Offer order
+{% endblock %}
+
+{% block id %}
+{{id}}
+{% endblock id %}
+
+{% block body %}
+<main class="form-signin text-center container">
+  <form method="post" action="/get_order_info/{{id}}">
+    <h1 class="h3 mb-3 fw-normal">Введите информацию о заказе</h1>
+
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="floatingSubject" placeholder="Subject" name="subject">
+      <label for="floatingSubject">Предмет</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="floatingDescription" placeholder="Description" name="description">
+      <label for="floatingDescription">Описание заказа</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="floatingDeadline" placeholder="Deadline" name="deadline">
+      <label for="floatingDeadline">Срок сдачи задания</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="floatingPrice" placeholder="Price" name="price">
+      <label for="floatingPrice">Цена</label>
+    </div>
+    <br>
+    <input style="background:#EE4C7C; border:#EE4C7C" class="w-100 btn btn-lg btn-primary" type = "submit" value = "Опубликовать заказ" name = "post_order" />
+<!--    <a href="http://127.0.0.1:5000/my_orders" class="button">-->
+<!--      <button style="background:#EE4C7C; border:#EE4C7C" class="w-100 btn btn-lg btn-primary" type="button" name="post_order" formmethod="post" onclick="get_order_info(event)">Опубликовать заказ</button>-->
+<!--    </a>-->
+  </form>
+</main>
+{% endblock %}

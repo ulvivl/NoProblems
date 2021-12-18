@@ -1,0 +1,36 @@
+{% extends 'authorized_base.html' %}
+
+{% block title %}
+Selected orders
+{% endblock %}
+
+
+{% block id %}
+{{id}}
+{% endblock id %}
+
+{% block body %}
+<div class="container">
+    <h1 class="h3 mb-3 fw-normal">Выбранные заказы</h1><br><br>
+
+    <b>Статус: status</b><br>
+    <b>Предмет: subject_name</b><br>
+    <b>Название: problem_name</b><br>
+    <b>Описание: description</b><br>
+    <b>Файл с заданием: problem_file</b><br>
+    <b>Срок сдачи: deadline</b><br>
+    <b>Цена: price</b>
+    <br><br>
+<!--    <a href="http://127.0.0.1:5000/selected_orders/{{id}}" class="button">
+      <button style="background:#EE4C7C; border:#EE4C7C" class="w-100 btn btn-lg btn-primary" type="button">Отметить выполненным</button>
+    </a> -->
+
+
+<!--    <a href="http://127.0.0.1:5000/selected_orders/{{id}}" class="button">-->
+    <input style="background:#EE4C7C; border:#EE4C7C" class="w-100 btn btn-lg btn-primary" type="submit" value="Отметить выполненным" name="completed" />
+<!--    </a>-->
+
+    <br><br><br>
+    <b>Другие заказы</b>
+</div>
+{% endblock %}

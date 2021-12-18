@@ -1,0 +1,48 @@
+{% extends 'authorized_base.html' %}
+
+{% block title %}
+Personal account
+{% endblock %}
+
+{% block id %}
+{{id}}
+{% endblock id %}
+
+{% block body %}
+<main class="form-signin text-center container">
+  <form>
+    <h1 class="h3 mb-3 fw-normal">Изменить информацию о себе</h1>
+
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="floatingFullname" placeholder="Fullname">
+      <label for="floatingFullname">Имя</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="floatingLogin" placeholder="Login">
+      <label for="floatingLogin">Логин</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="floatingCountry" placeholder="Country">
+      <label for="floatingCountry">Город</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="floatingTelephone" placeholder="Telephone">
+      <label for="floatingTelephone">Телефон</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email</label>
+    </div>
+    <br>
+<!--    <a href="http://127.0.0.1:5000/personal_account/{{id}}" class="button">
+      <button style="background:#EE4C7C; border:#EE4C7C" class="w-100 btn btn-lg btn-primary" type="button">Сохранить</button>
+    </a> -->
+
+    <input style="background:#EE4C7C; border:#EE4C7C" class="w-100 btn btn-lg btn-primary" type="submit" value="Сохранить" name="save_information" />
+  </form>
+</main>
+{% endblock %}

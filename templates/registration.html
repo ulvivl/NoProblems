@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Registration
+{% endblock %}
+
+{% block body %}
+<main class="form-signin text-center container">
+  <form method = "post" action="/get_registration">
+    <h1 class="h3 mb-3 fw-normal">Регистрация личного кабинета</h1>
+
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="floatingFullname" placeholder="Fullname" name="name">
+      <label for="floatingFullname">Имя</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
+      <label for="floatingInput">Email(Логин)</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="floatingCountry" placeholder="Country" name="country">
+      <label for="floatingCountry">Страна</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="floatingTelephone" placeholder="Telephone" name="telephone">
+      <label for="floatingTelephone">Телефон</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+      <label for="floatingPassword">Пароль</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" type="password" class="form-control" id="floatingPasswordRepeat" placeholder="Password" name="repeat_password">
+      <label for="floatingPasswordRepeat">Повторите пароль</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="floatinginfo" placeholder="info" name="info">
+      <label for="floatingPasswordRepeat">Напишите любую информацию о себе</label>
+    </div>
+    <br>
+     <input style="background:#EE4C7C; border:#EE4C7C" class="w-100 btn btn-lg btn-primary" type = "submit" value = "Зарегестрироваться" name = "register" />
+<!--    <a href="http://127.0.0.1:5000/personal_account" class="button">-->
+<!--      <button style="background:#EE4C7C; border:#EE4C7C" class="w-100 btn btn-lg btn-primary" type="button">Зарегистрироваться</button>-->
+<!--    </a>-->
+  </form>
+</main>
+{% endblock %}
