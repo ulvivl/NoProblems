@@ -1,0 +1,77 @@
+{% extends 'authorized_base.html' %}
+
+{% block title %}
+Select order
+{% endblock %}
+
+{% block id %}
+{{id}}
+{% endblock id %}
+
+{% block body %}
+<style>
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 90%;
+    }
+
+    td {
+        border: 1px solid #EE4C7C;
+        text-align: center;
+        padding: 7px;
+    }
+    th {
+        background-color: rgb(230, 89, 131);
+        text-align: center;
+        padding: 8px;
+    }
+    table.dataTable thead .sorting_asc:after {
+        padding-left: 1em;
+        content: "\2191";
+        color: 'red'
+    }
+</style>
+<main class="form-signin text-left container">
+    <form method="post" action="/sort_select/{{id}}">
+
+        <select style="background-color:rgb(230, 89, 131);color: rgb(245, 229, 234)" id="floatingSort" placeholder="Sort" name="sort">
+            <option value=Subject data-id="10414533690">по предмету</option>
+            <option value=Deadline data-id="10400654407">по дате дедлайна</option>
+            <option value=Price_low data-id="10410450732">самые дешевые</option>
+            <option value=Price_high data-id="10410450732">самые дорогие</option>
+            <option value=Post_date_new data-id="26334910464">самые новые</option>
+            <option value=Post_date_old data-id="26334910464">самые старые</option>
+        </select>
+        <input style="background:rgb(230, 89, 131); border:#EE4C7C" class="w-80 btn btn-sm btn-primary" type = "submit" value = "Отсортировать задачи" name = "sort" />
+    </form>
+
+</main><br>
+<table align="center">
+  <thead>
+    <tr>
+        {% for col in columns %}
+        <th>{{col}}</th>
+         {% endfor %}
+        <th>Выбрать</th>
+    </tr>
+    </thead>
+    <tbody>
+     {% for row in range(lenth) %}
+            <tr>
+                {% for i in range(number) %}
+                    <td>{{output_data[row][i]}}</td>
+                {% endfor %}
+                    <td>
+                        <form method='post' action="/select_problem/{{id}}/{{prob_ids[row][0]}}">
+                        <input style="background:#EE4C7C; border:#EE4C7C" type="submit" value="Выбрать" name="select{{prob_ids[row][0]}}" />
+                        </form>
+                    </td>
+            </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+

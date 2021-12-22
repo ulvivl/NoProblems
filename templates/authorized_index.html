@@ -1,0 +1,43 @@
+{% extends 'authorized_base.html' %}
+
+{% block title %}
+Authorized index
+{% endblock %}
+
+{% block id %}
+{{id}}
+{% endblock id %}
+
+{% block body %}
+<div class="container">
+    <!-- <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content=
+            "width=device-width, initial-scale=1.0">
+            <style>
+      .piechart {
+          margin-top: 300px;
+          display: block;
+          position: absolute;
+          width: 400px;
+          height: 400px;
+          border-radius: 50%;
+          background-image: conic-gradient(
+              pink 70deg,
+              lightblue 0 235deg,
+              orange 0);
+      }
+
+      body,
+      .piechart {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+  </style>
+    </head> -->
+    <h1>Добро пожаловать на сайт NoProblems, {{name}}!</h1><br>
+    <div class="piechart"></div>
+    <img src="https://cdn.lowgif.com/small/08d84a7709f6e4e3-sniffing-nicki-minaj-gif-by-dnce-find-share-on-giphy.gif">
+</div>
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'authorized_base.html' %}
+
+{% block title %}
+Offer order
+{% endblock %}
+
+{% block id %}
+{{id}}
+{% endblock id %}
+
+{% block body %}
+<main class="form-signin text-center container">
+  <form method="post" action="/get_order_info/{{id}}">
+    <h1 class="h3 mb-3 fw-normal">Введите информацию о заказе</h1>
+
+    <div class="form-group">
+      <select style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="floatingSubject" placeholder="Subject" name="subject">
+        <option value=Математика data-id="10414533690">Математика</option>
+        <option value='Английский язык' data-id="26334910464">Английский язык</option>
+        <option value='Русский язык' data-id="10400654407">Русский язык</option>
+        <option value=Литература data-id="10426428818">Литература</option>
+        <option value='Иностранный язык' data-id="10410450732">Иностранный язык</option>
+        <option value=Информатика data-id="10410522537">Информатика</option>
+        <option value=История data-id="10419531540">История</option>
+        <option value=Обществознание data-id="10400909101">Обществознание</option>
+        <option value=География data-id="10395022134">География</option>
+        <option value=Физика data-id="10396157513">Физика</option>
+        <option value=Химия data-id="10401935333">Химия</option>
+        <option value=Экология data-id="10419531540">Экология</option>
+        <option value=Биология data-id="10400909101">Биология</option>
+        <option value='Физическая культура' data-id="10395022134">Физическая культура</option>
+        <option value=Философия data-id="10396157513">Философия</option>
+        <option value=Социология data-id="10401935333">Социология</option>
+        <option value=Логистика data-id="10419531540">Логистика</option>
+        <option value=Дизайн data-id="10400909101">Дизайн</option>
+        <option value=Программирование data-id="10395022134">Программирование</option>
+        <option value=Право data-id="10396157513">Право</option>
+        <option value=Политология data-id="10401935333">Политология</option>
+      </select>      
+      <!-- <label for="floatingSubject">Предмет</label> -->
+    </div>
+    <br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="floatingDescription" placeholder="Description" name="description">
+      <label for="floatingDescription">Описание заказа</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input type="date" style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="floatingDeadline" placeholder="Deadline" name="deadline">
+      <label for="floatingDeadline">Срок сдачи задания</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="floatingPrice" placeholder="Price" name="price">
+      <label for="floatingPrice">Цена</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="floatingTag" placeholder="Tag" name="tag">
+      <label for="floatingPrice">Теги (через запятую)</label>
+    </div>
+    <br>
+    <input style="background:#EE4C7C; border:#EE4C7C" class="w-100 btn btn-lg btn-primary" type = "submit" value = "Опубликовать заказ" name = "post_order" />
+<!--    <a href="http://127.0.0.1:5000/my_orders" class="button">-->
+<!--      <button style="background:#EE4C7C; border:#EE4C7C" class="w-100 btn btn-lg btn-primary" type="button" name="post_order" formmethod="post" onclick="get_order_info(event)">Опубликовать заказ</button>-->
+<!--    </a>-->
+  </form>
+</main>
+{% endblock %} 
