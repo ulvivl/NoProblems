@@ -4,3 +4,6 @@
 В папке `templates` находятся все html файлы, необходимые для запуска `app.py`, в папке `static/css` - файлы со стилем.
 
 Ссылка на отчет https://docs.google.com/document/d/1Uxw9wAttbYBAVU-ja2dFrEeiM9bOgNjM/edit?usp=sharing&ouid=103861529429943300713&rtpof=true&sd=true
+
+Концепуальная модель
+[](https://github.com/ulvivl/NoProblems/blob/main/img/ERD.png)
