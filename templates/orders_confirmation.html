@@ -1,0 +1,30 @@
+{% extends 'authorized_base.html' %}
+
+{% block title %}
+Offer order
+{% endblock %}
+
+{% block id %}
+{{id}}
+{% endblock id %}
+
+{% block body %}
+<div class="container">
+    <h1 class="h3 mb-3 fw-normal">Заказы, ожидающие подтверждения отклика</h1><br><br>
+
+    <b>Статус: status</b><br>
+    <b>Предмет: subject_name</b><br>
+    <b>Название: problem_name</b><br>
+    <b>Описание: description</b><br>
+    <b>Срок сдачи: deadline</b><br>
+    <b>Цена: price</b>
+    <br><br>
+    <b>На этот заказ откликнулся пользователь User</b>
+    <br><br>
+    <input style="background:#EE4C7C; border:#EE4C7C" class="w-100 btn btn-lg btn-primary" type="submit" value="Принять отклик" name="confirm" />
+    <br><br>
+    <input style="background:#EE4C7C; border:#EE4C7C" class="w-100 btn btn-lg btn-primary" type="submit" value="Отклонить отклик" name="reject" />
+    <br><br><br>
+    <b>Другие заказы</b>
+</div>
+{% endblock %}

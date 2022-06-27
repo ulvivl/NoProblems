@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Repetitor
+{% endblock %}
+
+{% block body %}
+
+<main class="form-signin text-center container">
+  <form method = "post" action="/inforepet_2">
+    <h1 class="h3 mb-3 fw-normal">Поиск репетитора</h1>
+
+    <div class="form-floating" style="display: inline-block;">
+      <textarea style="width: 10cm; background-color:#1A1A1D;color:rgb(198, 198, 201)" class="form-control" id="floatingEducation" placeholder="Education" name="Education"></textarea>
+      <label for="floatingEducation" style="color: rgb(205, 146, 164);">Образование</label>
+    </div>
+    <br>
+<br>
+  <div class="form-floating" style="display: inline-block;">
+    <textarea style="width: 10cm; background-color:#1A1A1D;color:rgb(198, 198, 201)" class="form-control" id="floatingExp" placeholder="Exp" name="Exp"></textarea>
+    <label for="floatingExp" style="color: rgb(205, 146, 164);">Опыт</label>
+  </div>
+  <br><br>
+    <div class="form-floating" style="display: inline-block;">
+    <textarea style="width: 10cm; background-color:#1A1A1D;color:rgb(198, 198, 201)" class="form-control" id="floatingAdd" placeholder="Add" name="Add"></textarea>
+    <label for="floatingAdd" style="color: rgb(205, 146, 164);">Дополнительная информация</label>
+  </div>
+  <br><br>
+     <input style="width: 10cm; background:#EE4C7C; border:#EE4C7C" class="w-10 btn btn-lg btn-primary" type = "submit" value = "Найти репетитора" name = "register" />
+  </form>
+</main>
+{% endblock %}

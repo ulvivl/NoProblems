@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<style>
+    .dot {
+      height: 15px;
+      width: 15px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .ele_inline {
+      display: inline
+    }
+    .button_round {
+        border-radius: 8px;
+        font-size: 18px;
+    }
+
+    </style>
+<div class="container">
+
+    
+    <h2 class="ele_inline" style="color:#EE4C7C ">{{data[0][0]}}</h2>
+    <form action={{data[0][6]}}>
+        <button style="margin-left: 1000px; background:#EE4C7C; border:#EE4C7C" class="button_round ele_inline">Оригинальная анкета</button>
+    </form>
+    
+    <h3>Рейтинг {{data[0][1]}} ⭐️</h3><br>
+    <p style="margin-left: 50px;"><b>Предметы: </b>         
+        {% for sub in subjects[0] %}
+            {{sub}}, 
+        {% endfor %}</p>  
+    <p style="margin-left: 50px;"><b>Стоимость: </b>{{data[0][2]}} руб/час</p> 
+<!--       
+    <p style="margin-left: 50px;"><b>Скидка:  </b> 30% для учеников из социально незащищенных и многодетных семей, инвалидов, семей, находящихся в трудной жизненной ситуации.</p>
+    <p style="margin-left: 120px;">Скидка предоставляется только при условии систематического и самостоятельного выполнения домашних заданий.</p> -->
+
+    <div class="info-block aic b40">
+    <!-- <div class="icon">
+        <img src="/local/templates/Repetitors/images/icon-place.svg" class="l3" alt="">
+    </div> -->
+    <b  style="color:#EE4C7C ">Районы:  </b>
+    <div class="right" style="margin-left: 50px;">
+        {% for d in distr %}
+            {{d}}<br>
+        {% endfor %}</p> 
+                            <!-- Дистанционно,                                                                                                
+        <span class="dot" style="background-color: #48B960"></span>
+                                        м.                                                                                    Белорусская                                                                            
+        <span class="dot" style="background-color: #8C4E35"></span>
+                                        м.                                                                                    Менделеевская                                             -->
+    </div>
+</div><br>
+
+<p style="margin-left: 0px;"><b style="color:#EE4C7C ">Образование:  </b> </p>
+<div class="right" style="margin-left: 50px;">
+    {% for ed in education %}
+        {{ed}}<br>
+    {% endfor %}</p> 
+</div>
+
+<!-- <p style="margin-left: 50px;">  • Химический факультет МГУ им. М.В. Ломоносова, 1986 г.</p>
+<p style="margin-left: 50px;">  • Аспирантура химического факультета МГУ им. М.В. Ломоносова.</p> -->
+<br>
+
+<p style="margin-left: 0px;"><b style="color:#EE4C7C ">Опыт:  </b> </p>
+<div class="right" style="margin-left: 50px;">
+    {% for ex in experience %}
+        {{ex}}<br>
+    {% endfor %}</p> 
+</div>
+
+<!-- <p style="margin-left: 50px;">  • Репетиторская деятельность (школьники, ЕГЭ, абитуриенты в МГУ, ММА им. Сеченова, РХТУ, МГУПБ, студенты) — 27 лет.</p>
+<p style="margin-left: 50px;">  • Работа в школе (физико-математический класс в лицее, частная школа, спецкурс в гимназии) — 21 год.</p>
+<p style="margin-left: 50px;">  • Преподаватель РХТУ им. Д.И. Менделеева, старший преподаватель кафедры общей и неорганической химии, 1989–2016 гг.</p> -->
+    <br><br>
+
+</div>
+{% endblock %}

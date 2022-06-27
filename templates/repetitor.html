@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Repetitor
+{% endblock %}
+
+{% block body %}
+
+<main class="form-signin text-center container">
+  <form method = "post" action="/get_registration">
+    <h1 class="h3 mb-3 fw-normal">Введите информацию о репетиторе</h1>
+
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="floatingFullname" placeholder="Fullname" name="name">
+      <label for="floatingFullname">Предметная область</label>
+    </div>
+    <br>
+    <div class="form-floating" style="display: inline-block;">
+      <input style="width: 10cm; background-color:#1A1A1D;color:rgb(198, 198, 201)" class="form-control" id="floatingInput" placeholder="city" name="city">
+      <label for="floatingInput" style="color: rgb(205, 146, 164);">Город</label>
+    </div>
+    <br><br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" class="form-control" id="district" placeholder="Dist" name="District">
+      <label for="district">Район</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <textarea style="background-color:#1A1A1D;color:#4E4E50" class="form-control" placeholder="education" id="education"></textarea>
+      <label for="education">Образование</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:rgb(198, 198, 201)" class="form-control" id="floatinginfo" placeholder="info" name="info">
+      <label for="floatingPasswordRepeat">Опыт</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input style="background-color:#1A1A1D;color:#4E4E50" type="password" class="form-control" id="floatingPasswordRepeat" placeholder="Password" name="repeat_password">
+      <label for="floatingPasswordRepeat">Доплнительная информация</label>
+    </div>
+    <br>
+     <input style="background:#EE4C7C; border:#EE4C7C" class="w-100 btn btn-lg btn-primary" type = "submit" value = "Поиск" name = "register" />
+<!--    <a href="http://127.0.0.1:5000/personal_account" class="button">-->
+<!--      <button style="background:#EE4C7C; border:#EE4C7C" class="w-100 btn btn-lg btn-primary" type="button">Зарегистрироваться</button>-->
+<!--    </a>-->
+  </form>
+</main>
+{% endblock %}
