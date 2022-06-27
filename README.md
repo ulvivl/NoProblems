@@ -9,4 +9,4 @@
 В файле main_project.ipynb находится код, посвященный обработке собранных данных и обучению различных моделей.
 
 Ссылка на [отчет](https://docs.google.com/document/d/11F7YktrrcKKb5SdGmE9oi65mUmHZ13RGBdRE8-LfYws/edit?usp=sharing)<br>
-Ссылка на [google colab]()
+Ссылка на [google colab](https://colab.research.google.com/drive/1D-liHbNL_pAiPGQsn924UEvqQ0GzBOld?usp=sharing)
